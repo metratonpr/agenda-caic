@@ -16,6 +16,14 @@ class TipoController extends Controller
     public function index()
     {
         $tipos = Tipo::all();
+        
+        //Retornar uma view
+        //quando eu quero executar uma pagina direto
+
+        return view('tipos.index',compact([$tipos]))
+
+        //Retornar um Json
+        //quando eu quero retornar um arquivo com dados
     }
 
     /**
