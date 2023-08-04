@@ -29,7 +29,8 @@ class TipoController extends Controller
      */
     public function create()
     {
-        //
+        //abrir pagina onde voce vai criar
+        return view('tipos.create');
     }
 
     /**
