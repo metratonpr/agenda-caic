@@ -15,16 +15,12 @@ class TipoController extends Controller
      */
     public function index()
     {
-        $tipos = Tipo::all();
-        
+        $tipos = Tipo::all();  //Pesquisa tudo no banco
+        //$tipos = Tipo::paginate(50)     
         //Retornar uma view
         //quando eu quero executar uma pagina direto
-
-        return view('tipos.index',compact([$tipos]))
-
-        //Retornar um Json
-        //quando eu quero retornar um arquivo com dados
-    }
+        return view('tipos.index',compact([$tipos]));
+       }
 
     /**
      * Show the form for creating a new resource.
