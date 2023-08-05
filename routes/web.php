@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TipoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+//Get
+Route::get('/tipos',[TipoController::class,'index'])->name('tipos.create');
+//Post
+//Put
+//Delete
