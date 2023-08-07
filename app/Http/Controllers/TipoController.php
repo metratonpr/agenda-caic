@@ -19,7 +19,7 @@ class TipoController extends Controller
         //$tipos = Tipo::paginate(50)     
         //Retornar uma view
         //quando eu quero executar uma pagina direto
-        return view('tipos.index',compact([$tipos]));
+        return view('tipos.index',compact(['tipos']));
        }
 
     /**
