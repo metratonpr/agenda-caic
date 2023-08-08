@@ -13,10 +13,15 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+/** 
+ * Um grupo
+ * Rota protegida
+ * rota com prefixo
+ * backoffice.home */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('index');
+})->name('home');
 
 //Get
 Route::get('/tipos', [TipoController::class, 'index'])
