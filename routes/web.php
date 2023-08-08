@@ -26,6 +26,9 @@ Route::get('/', function () {
 //Get
 Route::get('/tipos', [TipoController::class, 'index'])
     ->name('tipos.index');
+
+Route::get('/tipos/create', [TipoController::class, 'create'])
+    ->name('tipos.create');
 //Post
 //Put
 //Delete
