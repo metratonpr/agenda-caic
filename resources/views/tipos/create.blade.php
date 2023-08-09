@@ -1,11 +1,12 @@
 @extends('index')
 @section('content')
-<div>
+<div class="col-6">
     <div>
         <h1>Novo Tipo</h1>
     </div>
     <div>
-        <form action="" method="post">
+        <form action="{{ route('tipos.store'}}" method="post">
+            @csrf
             <div class="mb-3">
                 <label for="descricao" class="form-label">Descrição</label>
                 <input type="text" class="form-control" id="descricao" 

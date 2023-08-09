@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 /** 
  * Um grupo
  * Rota protegida
@@ -30,5 +31,8 @@ Route::get('/tipos', [TipoController::class, 'index'])
 Route::get('/tipos/create', [TipoController::class, 'create'])
     ->name('tipos.create');
 //Post
+Route::post('/tipos', [TipoController::class, 'store'])->name('tipos.store');
 //Put
 //Delete
+
+//Route::resources('/tipos',TipoController::class);
