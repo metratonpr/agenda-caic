@@ -41,7 +41,16 @@ class TipoController extends Controller
      */
     public function store(StoreTipoRequest $request)
     {
-        //
+        //pegar dados do request
+        $data = $request->all();
+
+        // dd($data);
+
+        $tipo = Tipo::create($data);
+
+        // return view('tipos.show',compact(['tipos']));
+        return redirect()->route('tipos.index');
+       
     }
 
     /**
