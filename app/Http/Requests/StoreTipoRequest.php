@@ -13,7 +13,7 @@ class StoreTipoRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,7 @@ class StoreTipoRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'descricao' =>'min: 2 | max: 50 | required | unique:tipos,descricao'
         ];
     }
 }
