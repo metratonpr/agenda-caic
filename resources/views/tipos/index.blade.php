@@ -26,7 +26,13 @@
                     <td> {{$t->descricao}} </td>
                     <td> {{$t->created_at}} </td>
                     <td> {{$t->updated_at}} </td>
-                    <td>Opções </td>
+                    <td>
+                        <div class="btn-group">
+                            <a href="" role='button' class="btn btn-primary"><i class="bi bi-pencil"></i> Editar</a>
+                            <a href="" role='button' class="btn btn-warning"><i class="bi bi-card-checklist"></i> Show</a>
+                        </div>
+                        
+                </td>
                 </tr>
                 @endforeach
             </tbody>
