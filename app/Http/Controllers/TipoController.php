@@ -62,6 +62,7 @@ class TipoController extends Controller
     public function show(Tipo $tipo)
     {
         //
+        dd($tipo);
     }
 
     /**
@@ -73,6 +74,7 @@ class TipoController extends Controller
     public function edit(Tipo $tipo)
     {
         //
+        dd($tipo);
     }
 
     /**

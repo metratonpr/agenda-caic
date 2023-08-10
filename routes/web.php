@@ -30,6 +30,12 @@ Route::get('/tipos', [TipoController::class, 'index'])
 
 Route::get('/tipos/create', [TipoController::class, 'create'])
     ->name('tipos.create');
+
+Route::get('/tipos/edit/{tipo}', [TipoController::class, 'edit'])
+    ->name('tipos.edit');
+
+Route::get('/tipos/show/{tipo}', [TipoController::class, 'show'])
+    ->name('tipos.show');
 //Post
 Route::post('/tipos', [TipoController::class, 'store'])->name('tipos.store');
 //Put
