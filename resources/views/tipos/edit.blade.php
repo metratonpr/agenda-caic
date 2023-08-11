@@ -14,7 +14,7 @@
                 class="form-control  @error('descricao') is-invalid @enderror"
                 id="descricao" 
                 placeholder="Exemplo: Cancelado" name="descricao"                
-                value="{{ old('descricao') }}"
+                value="{{ $tipo->descricao ?? old('descricao') }}"
                 >
                 @error('descricao')
                 <div class="invalid-feedback">
