@@ -19,8 +19,8 @@ class TipoController extends Controller
         //$tipos = Tipo::paginate(50)     
         //Retornar uma view
         //quando eu quero executar uma pagina direto
-        return view('tipos.index',compact(['tipos']));
-       }
+        return view('tipos.index', compact(['tipos']));
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -50,7 +50,6 @@ class TipoController extends Controller
 
         // return view('tipos.show',compact(['tipos']));
         return redirect()->route('tipos.index');
-       
     }
 
     /**
@@ -61,8 +60,8 @@ class TipoController extends Controller
      */
     public function show(Tipo $tipo)
     {
-         //retornar view e passr o tipo
-         return view('tipos.show',compact(['tipo']));
+        //retornar view e passr o tipo
+        return view('tipos.show', compact(['tipo']));
     }
 
     /**
@@ -74,7 +73,7 @@ class TipoController extends Controller
     public function edit(Tipo $tipo)
     {
         //retornar view e passr o tipo
-        return view('tipos.edit',compact(['tipo']));
+        return view('tipos.edit', compact(['tipo']));
     }
 
     /**
@@ -99,6 +98,9 @@ class TipoController extends Controller
      */
     public function destroy(Tipo $tipo)
     {
-        //
+        //é recomendavel verificar se existe no banco antes de
+        //deletar
+        $tipo->delete();
+        return redirect()->route('tipos.index');
     }
 }
