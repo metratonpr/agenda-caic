@@ -42,5 +42,7 @@ Route::post('/tipos', [TipoController::class, 'store'])->name('tipos.store');
 Route::put('/tipos/{tipo}', 
 [TipoController::class, 'update'])->name('tipos.update');
 //Delete
+Route::delete('/tipos/{tipo}', 
+[TipoController::class, 'destroy'])->name('tipos.destroy');
 
 //Route::resources('/tipos',TipoController::class);
