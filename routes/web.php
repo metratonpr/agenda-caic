@@ -39,6 +39,8 @@ Route::get('/tipos/show/{tipo}', [TipoController::class, 'show'])
 //Post
 Route::post('/tipos', [TipoController::class, 'store'])->name('tipos.store');
 //Put
+Route::put('/tipos/{tipo}', 
+[TipoController::class, 'store'])->name('tipos.store');
 //Delete
 
 //Route::resources('/tipos',TipoController::class);

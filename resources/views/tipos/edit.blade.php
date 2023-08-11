@@ -5,7 +5,7 @@
         <h1>Editando Tipo</h1>
     </div>
     <div>
-        <form action="{{ route('tipos.update') }}" method="post">
+        <form action="{{ route('tipos.update',['tipo' =>$tipo]) }}" method="post">
             @csrf
             @method('PUT')
             <div class="mb-3">
