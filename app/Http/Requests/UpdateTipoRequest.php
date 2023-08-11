@@ -23,14 +23,15 @@ class UpdateTipoRequest extends FormRequest
      */
     public function rules()
     {
-        $id = $this->route('id'); // Supondo que o parâmetro da rota seja chamado de "id"
+
+        $tipo = $this->route('tipo'); 
 
         return [
             'descricao' => [
                 'required',
                 'min:2',
                 'max:50',
-                "unique:tipos,descricao,{$id},id", // Ignora o registro com o mesmo ID
+                "unique:tipos,descricao,{$tipo->id},id",
             ],
         ];
     }
