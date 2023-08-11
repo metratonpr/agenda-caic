@@ -61,8 +61,8 @@ class TipoController extends Controller
      */
     public function show(Tipo $tipo)
     {
-        //
-        dd($tipo);
+         //retornar view e passr o tipo
+         return view('tipos.show',compact(['tipo']));
     }
 
     /**
@@ -73,8 +73,8 @@ class TipoController extends Controller
      */
     public function edit(Tipo $tipo)
     {
-        //
-        dd($tipo);
+        //retornar view e passr o tipo
+        return view('tipos.edit',compact(['tipo']));
     }
 
     /**
