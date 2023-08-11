@@ -88,7 +88,7 @@ class TipoController extends Controller
     {
         $data = $request->all();
         $tipo->update($data);
-        return redirect()->route('tipo.index');
+        return redirect()->route('tipos.index');
     }
 
     /**
