@@ -13,7 +13,7 @@ class UpdateTarefaRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -25,6 +25,11 @@ class UpdateTarefaRequest extends FormRequest
     {
         return [
             //
+            'data' => 'date | required',
+            'assunto' => 'min: 2 | max: 50 | required',
+            'descricao' => 'min: 2 | max: 250 | required',
+            'contato' => 'min: 2 | max: 50 | required',
+            'tipo_id' => 'required | integer | exists:tipos,id'
         ];
     }
 }
