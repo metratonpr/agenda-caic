@@ -48,3 +48,5 @@ Route::delete('/tipos/{tipo}',
 
 //php artisan route:list
 Route::resource('tarefas',TarefaController::class);
+
+
