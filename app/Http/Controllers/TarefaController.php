@@ -56,6 +56,8 @@ class TarefaController extends Controller
     public function show(Tarefa $tarefa)
     {
         //
+        $tipos = Tipo::all();
+        return view('tarefas.show',compact(['tipos']));
     }
 
     /**
@@ -66,7 +68,8 @@ class TarefaController extends Controller
      */
     public function edit(Tarefa $tarefa)
     {
-        //
+        $tipos = Tipo::all();
+        return view('tarefas.edit',compact(['tipos']));
     }
 
     /**
@@ -78,7 +81,9 @@ class TarefaController extends Controller
      */
     public function update(UpdateTarefaRequest $request, Tarefa $tarefa)
     {
-        //
+        $data = $request->all();
+        $tarefa->update($data);
+        return redirect()->route('tarefas.index');
     }
 
     /**
@@ -89,6 +94,7 @@ class TarefaController extends Controller
      */
     public function destroy(Tarefa $tarefa)
     {
-        //
+        $tarefa->delete();
+        return redirect()->route('tarefas.index');
     }
 }
