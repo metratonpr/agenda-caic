@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Tarefa;
 use App\Http\Requests\StoreTarefaRequest;
 use App\Http\Requests\UpdateTarefaRequest;
+use App\Models\Tipo;
 
 class TarefaController extends Controller
 {
@@ -15,7 +16,8 @@ class TarefaController extends Controller
      */
     public function index()
     {
-        //
+        $tarefas = Tarefa::all();
+        return view('tarefas.index',compact(['tarefas']));
     }
 
     /**
@@ -26,6 +28,9 @@ class TarefaController extends Controller
     public function create()
     {
         //
+        $tipos = Tipo::all();
+
+        return view('tarefas.create',compact(['tipos']));
     }
 
     /**
