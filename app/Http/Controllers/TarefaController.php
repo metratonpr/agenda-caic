@@ -41,7 +41,10 @@ class TarefaController extends Controller
      */
     public function store(StoreTarefaRequest $request)
     {
-        //
+        $data = $request->all();
+        $tarefa = Tarefa::create($data);
+        // dd($tarefa);
+        return redirect()->route('tarefas.index');
     }
 
     /**
