@@ -39,6 +39,9 @@
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="{{ route('tipos.index') }}">Tipo</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="{{ route('tarefas.index') }}">Tarefas</a>
+                        </li>
                     </ul>
                 </div>
             </div>
