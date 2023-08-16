@@ -47,8 +47,11 @@
                 <div class="form-floating">
                     <select class="form-select" id="tipo_id" name="tipo_id">
                         <option selected>Escolha uma opção</option>
-                        @foreach($tipos as $t)
-                        <option value="{{$t->id}}">{{$t->descricao}}</option>
+                        @foreach($tipos as $tipo)
+                        <option value="{{$tipo->id}}" 
+                        {{ old('tipo_id') == $tipo->id ? 'selected' : '' }}>
+                            {{$tipo->descricao}}
+                        </option>
                         @endforeach
                     </select>
                     <label for="tipo_id">Situação</label>
