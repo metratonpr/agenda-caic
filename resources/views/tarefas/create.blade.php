@@ -43,6 +43,17 @@
                 </div>
                 @enderror
             </div>
+            <div class="mb-3">
+                <div class="form-floating">
+                    <select class="form-select" id="tipo_id" name="tipo_id">
+                        <option selected>Escolha uma opção</option>
+                        @foreach($tipos as $t)
+                        <option value="{{$t->id}}">{{$t->descricao}}</option>
+                        @endforeach
+                    </select>
+                    <label for="tipo_id">Situação</label>
+                </div>
+            </div>
             <div class="btn-group">
                 <button type="submit" class="btn btn-success">Salvar</button>
                 <button type="reset" class="btn btn-danger">Limpar</button>
