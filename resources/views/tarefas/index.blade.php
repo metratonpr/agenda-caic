@@ -26,8 +26,8 @@
                     <td> {{$t->id}} </td>
                     <td> {{$t->assunto}} </td>
                     <td> {{$t->tipo->descricao}} </td>
-                    <td> {{$t->created_at}} </td>
-                    <td> {{$t->updated_at}} </td>
+                    <td> {{strftime('%d/%m/%Y %H:%M:%S', strtotime($t->created_at))}} </td>
+                    <td> {{strftime('%d/%m/%Y %H:%M:%S', strtotime($t->updated_at))}} </td>
                     <td>
                         <div class="btn-group">
                             <a href="{{ route('tarefas.edit',['tarefa' => $t] )}}" role='button' class="btn btn-primary"><i class="bi bi-pencil">Editar</i> </a>
