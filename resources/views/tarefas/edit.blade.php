@@ -55,6 +55,8 @@
                         @endforeach
                     </select>
                     <label for="tipo_id">Situação</label>
+
+                    
                 </div>
             </div>
             <div class="btn-group">
