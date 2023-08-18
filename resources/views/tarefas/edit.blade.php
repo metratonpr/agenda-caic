@@ -7,6 +7,7 @@
     <div>
         <form action="{{ route('tarefas.update',['tarefa' => $tarefa]) }}" method="post">
             @csrf
+            @method('PUT')
             <div class="mb-3">
                 <label for="data" class="form-label">Data</label>
                 <input type="date" class="form-control  @error('data') is-invalid @enderror" id="data" placeholder="Exemplo: Cancelado" name="data" value="{{ old('data') ?? $tarefa->data }}">
